@@ -26,6 +26,9 @@ document.addEventListener("DOMContentLoaded", function() {
     // Comportamiento para mouse
     noBtn.addEventListener("mouseover", moveNoButton);
 
-    // Comportamiento para pantallas táctiles
-    noBtn.addEventListener("touchstart", moveNoButton);
+    // Comportamiento para pantallas táctiles (móviles)
+    noBtn.addEventListener("touchstart", function(e) {
+        e.preventDefault(); // Prevenir comportamientos inesperados en móviles
+        moveNoButton();
+    });
 });
