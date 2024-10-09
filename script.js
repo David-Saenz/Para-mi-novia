@@ -10,8 +10,8 @@ document.addEventListener("DOMContentLoaded", function() {
         yesScreen.classList.remove("hidden");
     });
 
-    // Función para mover el botón "No" de posición aleatoriamente
-    function moveNoButton() {
+    // Comportamiento del botón "No" (se mueve al azar)
+    noBtn.addEventListener("mouseover", function() {
         const maxWidth = window.innerWidth - noBtn.offsetWidth;
         const maxHeight = window.innerHeight - noBtn.offsetHeight;
 
@@ -21,14 +21,6 @@ document.addEventListener("DOMContentLoaded", function() {
         noBtn.style.position = "absolute";
         noBtn.style.left = `${randomX}px`;
         noBtn.style.top = `${randomY}px`;
-    }
-
-    // Comportamiento para mouse
-    noBtn.addEventListener("mouseover", moveNoButton);
-
-    // Comportamiento para pantallas táctiles (móviles)
-    noBtn.addEventListener("touchstart", function(e) {
-        e.preventDefault(); // Prevenir comportamientos inesperados en móviles
-        moveNoButton();
     });
 });
+
