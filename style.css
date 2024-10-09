@@ -29,7 +29,6 @@ h1 {
 .buttons {
     display: flex;
     justify-content: space-around;
-    gap: 10px;
 }
 
 .btn {
@@ -70,13 +69,6 @@ h1 {
 
 .hidden {
     display: none;
-}
-
-@media (max-width: 600px) {
-    .btn {
-        font-size: 1em;
-        padding: 10px 20px;
-    }
 }
 
 .hidden {
