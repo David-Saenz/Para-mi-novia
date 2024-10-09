@@ -29,6 +29,7 @@ h1 {
 .buttons {
     display: flex;
     justify-content: space-around;
+    gap: 10px;
 }
 
 .btn {
@@ -65,6 +66,17 @@ h1 {
     align-items: center;
     height: 100vh;
     background-color: #ffffff;
+}
+
+.hidden {
+    display: none;
+}
+
+@media (max-width: 600px) {
+    .btn {
+        font-size: 1em;
+        padding: 10px 20px;
+    }
 }
 
 .hidden {
